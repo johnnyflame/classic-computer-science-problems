@@ -20,7 +20,7 @@ class Constraint(Generic[V, D], ABC):
 class CSP(Generic[V, D]):
     def __init__(self, variables: List[V], domains: Dict[V, List[D]]) -> None:
         self.variables: List[V] = variables  # variables to be constrained
-        self.domains: Dict[V, List[D]] = Domains
+        self.domains: Dict[V, List[D]] = domains  # domains for each variable
         self.constraints: Dict[V, List[Constraint[V, D]]] = {}
         for variable in self.variables:
             self.constraints[variable] = []
