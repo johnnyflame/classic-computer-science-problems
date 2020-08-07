@@ -1,0 +1,4 @@
+# config and environment files
+.venv
+.venv/
+*.json
